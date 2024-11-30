@@ -41,6 +41,7 @@
         <CommandBinding Command="CancelPrint" Executed="Command_RunSpecial" />
         <CommandBinding Command="PrintPreview" Executed="Command_RunDebug" />
         <CommandBinding Command="Properties" Executed="Command_Settings" />
+        <CommandBinding Command="{x:Static local:MainWindow.RunScriptCommand}" Executed="Command_RunScript" />
         <CommandBinding Command="{x:Static local:MainWindow.CloseTabCommand}" Executed="Command_CloseTab" />
         <CommandBinding Command="{x:Static local:MainWindow.CloseAllTabsCommand}" Executed="Command_CloseAllTabs" />
         <CommandBinding Command="{x:Static local:MainWindow.RestoreClosedTabCommand}" Executed="Command_RestoreClosedTab" />
@@ -59,6 +60,7 @@
         <KeyBinding Key="F5" Command="Print"/>
         <KeyBinding Modifiers="Alt" Key="F5" Command="CancelPrint"/>
         <KeyBinding Modifiers="Shift" Key="F5" Command="PrintPreview"/>
+        <KeyBinding Modifiers="Control" Key="F5" Command="{x:Static local:MainWindow.RunScriptCommand}"/>
         <KeyBinding Modifiers="Control" Key="W" Command="{x:Static local:MainWindow.CloseTabCommand}"/>
         <KeyBinding Gesture="Ctrl+Shift+W" Command="{x:Static local:MainWindow.CloseAllTabsCommand}"/>
         <KeyBinding Gesture="Ctrl+Shift+T" Command="{x:Static local:MainWindow.RestoreClosedTabCommand}"/>

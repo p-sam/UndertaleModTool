@@ -76,6 +76,7 @@ namespace UndertaleModTool
         public static RoutedUICommand SwitchToPrevTabCommand = new RoutedUICommand("Switch to the previous tab", "SwitchToPrevTab", typeof(MainWindow));
         public static RoutedUICommand SearchInCodeCommand = new("Search in code", "SearchInCode", typeof(MainWindow));
 
+        public static RoutedUICommand RunScriptCommand = new RoutedUICommand("Temp Run Game after applying last script", "RunScript", typeof(MainWindow));
         public ObservableCollection<Tab> Tabs { get; set; } = new();
         public Tab CurrentTab
         {
@@ -2902,6 +2903,16 @@ result in loss of work.");
                 await Task.Delay(3000);
                 //File.Delete(TempFilesFolder);
             }
+        }
+        private async void Command_RunScript(object sender, ExecutedRoutedEventArgs e)
+        {
+            if(ScriptPath != null) {
+                await RunScript(ScriptPath);
+                if(!ScriptExecutionSuccess) {
+                    return;
+                }
+            }
+            Command_Run(sender, e);
         }
         private async void Command_RunSpecial(object sender, ExecutedRoutedEventArgs e)
         {

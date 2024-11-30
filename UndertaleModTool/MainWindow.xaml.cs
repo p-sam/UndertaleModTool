@@ -394,6 +394,18 @@ namespace UndertaleModTool
             }
 
             var args = Environment.GetCommandLineArgs();
+            if (args.Length > 2 && args[2] == "_runscriptandexit") {
+                try {
+                    await RunScript(args[1]);
+                    if(!ScriptExecutionSuccess) {
+                        Environment.Exit(1);
+                    }
+                    Environment.Exit(0);
+                } catch(Exception exc) {
+                    MessageBox.Show(exc.ToString());
+                    Environment.Exit(1);
+                }
+            }
             bool isLaunch = false;
             bool isSpecialLaunch = false;
             if (args.Length > 1)

@@ -1,5 +1,16 @@
 # UndertaleModTool
 
+This is not the official UndertaleModTool repo.
+
+This fork's branch uses known working upstream branch with arbitrary QoL changes for editing/decompiling ufo50. Changes could probably be cleaned up and upstreamed if requested.
+
+[![Workflow](https://img.shields.io/github/actions/workflow/status/p-sam/UndertaleModTool/publish_gui.yml?branch=ufo50
+)](https://github.com/p-sam/UndertaleModTool/actions/workflows/publish_gui.yml?query=branch%3Aufo50)
+[![Nightly](https://img.shields.io/badge/Downloads-last%20GUI%20build-blue)](https://nightly.link/p-sam/UndertaleModTool/workflows/publish_gui/ufo50)
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
 [![Underminers Discord](https://img.shields.io/discord/566861759210586112?label=Discord&logo=discord&logoColor=white)](https://discord.gg/hnyMDypMbN) [![GitHub](https://img.shields.io/github/license/krzys-h/UndertaleModTool?logo=github)](https://github.com/krzys-h/UndertaleModTool/blob/master/LICENSE.txt)
 
 (seeing such an amazing tool fills you with DETERMINATION.)
